@@ -1,0 +1,26 @@
+<?php
+// WigiNote
+// (c) nial group, Ondrej Sika
+
+$locked = 1;
+
+include "core/header.php"; // header
+include "core/inc.php"; // included files
+
+if($locked == 0) $access = 1;
+elseif(logon() == 1) $access = 1;
+else $access = 0;
+
+if($access == 1)
+{
+/**********/
+include "core/pages/head.php";
+include "core/pages/menu.php";
+
+
+/**********/
+}
+
+
+include "core/footer.php"; // footer
+?>

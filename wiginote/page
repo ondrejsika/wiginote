@@ -1,0 +1,19 @@
+<?php
+// nidb
+// (c) nial group, Ondrej Sika
+include "inc/header.php";
+include "inc/log_fce.php";
+if (logon()):
+//
+	print "Prihlasen uzivatel ".user_jmeno(user());
+	print "<hr size=1 color='black'>
+		poznamky uzivatele
+		<hr size=1 color='black'>
+		ostatni punamky
+	";
+//
+else:
+	header("location: index.php");
+endif;
+include "inc/footer.php";
+?>
